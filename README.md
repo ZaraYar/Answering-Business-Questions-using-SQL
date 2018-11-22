@@ -30,6 +30,7 @@ We have been asked to find out what percentage of purchases are individual track
 In this instance, we have two edge cases to consider:
 - Albums that have only one or two tracks are likely to be purchased by customers as part of a collection of individual tracks.
 - Customers may decide to manually select every track from an album, and then add a few individual tracks from other albums to their purchase.
+
 In the first case, since our analysis is concerned with maximizing revenue we can safely ignore albums consisting of only a few tracks. The company has previously done analysis to confirm that the second case does not happen often, so we can ignore this case also.
 In order to answer the question, we're going to have to identify whether each invoice has all the tracks from an album. We can do this by getting the list of tracks from an invoice and comparing it to the list of tracks from an album. We can find the album to compare the purchase to by looking up the album that one of the purchased tracks belongs to. It doesn't matter which track we pick, since if it's an album purchase, that album will be the same for all tracks.
 
